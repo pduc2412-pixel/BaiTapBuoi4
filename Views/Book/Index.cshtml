@@ -1,0 +1,29 @@
+@model List<LoginDemoCore.Models.Book>
+
+<div class="page-box">
+    <h2>Danh sách sách</h2>
+
+    <table class="book-table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Model)
+            {
+                <tr>
+                    <td>@book.Id</td>
+                    <td>@book.Name</td>
+                    <td>@book.Price</td>
+                    <td><a asp-controller="Book" asp-action="Detail" asp-route-id="@book.Id">Chi tiết</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <p><a asp-controller="Book" asp-action="Create">+ Thêm sách</a></p>
+</div>

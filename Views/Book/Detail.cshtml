@@ -1,0 +1,13 @@
+@model LoginDemoCore.Models.Book
+
+<div class="page-box">
+    <h2>Chi tiết sách</h2>
+
+    <div class="book-detail">
+        <p><strong>Id:</strong> @Model.Id</p>
+        <p><strong>Tên sách:</strong> @Model.Name</p>
+        <p><strong>Giá:</strong> @Model.Price</p>
+    </div>
+
+    <p><a asp-controller="Book" asp-action="Index">Quay lại danh sách</a></p>
+</div>
